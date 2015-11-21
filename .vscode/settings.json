@@ -1,0 +1,4 @@
+{
+  "swiftlint.enable": true,
+  "javascript.validate.syntaxValidation": false
+}

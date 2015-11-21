@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.4, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="layer1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="55.5px" height="56px" viewBox="0 0 55.5 56" enable-background="new 0 0 55.5 56" xml:space="preserve">
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="27.7495" y1="0" x2="27.7495" y2="56.0005">
+	<stop  offset="0" style="stop-color:#FCAB40"/>
+	<stop  offset="1" style="stop-color:#FF3728"/>
+</linearGradient>
+<ellipse fill="url(#SVGID_1_)" cx="27.75" cy="28" rx="27.75" ry="28"/>
+<rect x="-0.122" y="12.166" fill="none" width="55.872" height="19.334"/>
+<text transform="matrix(1 0 0 1 10.7534 26.9946)" fill="#FFFFFF" font-family="'MyriadPro-Light'" font-size="17.7165">Swift</text>
+<rect x="-0.373" y="28" fill="none" width="56.373" height="19.162"/>
+<text transform="matrix(1 0 0 1 15.2959 42.2354)" fill="#FFFFFF" font-family="'MyriadPro-Light'" font-size="17.0079">Lint</text>
+</svg>

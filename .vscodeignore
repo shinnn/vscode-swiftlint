@@ -1,0 +1,6 @@
+.vscode/**
+.editorconfig
+.gitignore
+*.png
+*.swift
+test
