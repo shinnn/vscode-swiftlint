@@ -4,9 +4,9 @@
   "displayName": "SwiftLint",
   "description": "Use SwiftLint to lint Swift files",
   "publisher": "shinnn",
-  "repository": "https://github.com/shinnn/vscode-standard",
-  "homepage": "https://github.com/shinnn/vscode-standard#readme",
-  "bugs": "https://github.com/shinnn/vscode-standard/issues",
+  "repository": "https://github.com/shinnn/vscode-swiftlint",
+  "homepage": "https://github.com/shinnn/vscode-swiftlint#readme",
+  "bugs": "https://github.com/shinnn/vscode-swiftlint/issues",
   "license": "MIT",
   "icon": "icon.svg",
   "galleryBanner": {
@@ -14,7 +14,7 @@
     "theme": "light"
   },
   "engines": {
-    "vscode": "^0.10.1"
+    "vscode": "^1.17.0"
   },
   "categories": [
     "Linters"
@@ -22,7 +22,12 @@
   "activationEvents": [
     "onLanguage:swift"
   ],
-  "main": "extension.js",
+  "keywords": [
+    "swift",
+    "swiftlint",
+    "linter"
+  ],
+  "main": "src/extension.js",
   "contributes": {
     "configuration": {
       "type": "object",
@@ -31,23 +36,24 @@
         "swiftlint.enable": {
           "type": "boolean",
           "default": false,
-          "description": "Control whether SwiftLint is enabled for Swift files or not."
+          "description": "Controls whether SwiftLint is enabled for Swift files or not."
         }
       }
     }
   },
   "scripts": {
-    "test": "eslint --config @shinnn/node --fix extension.js parser.js server.js"
+    "test": "eslint --config @shinnn/node --fix src/extension.js src/parser.js src/server.js",
+    "postinstall": "node ./node_modules/vscode/bin/install"
   },
   "dependencies": {
-    "concat-stream": "1.5.1",
-    "vscode-languageclient": "0.10.7",
-    "vscode-languageserver": "0.10.6",
+    "concat-stream": "1.6.2",
+    "vscode-languageclient": "5.1.1",
+    "vscode-languageserver": "5.1.0",
     "which-promise": "1.0.0"
   },
   "devDependencies": {
     "@shinnn/eslint-config-node": "^1.0.1",
     "eslint": "^1.10.0",
-    "vscode": "^0.10.4"
+    "vscode": "^1.1.21"
   }
 }

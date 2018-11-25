@@ -4,7 +4,9 @@ const concatStream = require('concat-stream');
 const langServer = require('vscode-languageserver');
 const spawn = require('child_process').spawn;
 const whichPromise = require('which-promise');
-const parser = require('./parser.js');
+const parser = require('./parser');
+const join = require('path').join;
+const existsSync = require('fs').existsSync;
 
 let cwd;
 let swiftLintPath;
@@ -41,6 +43,17 @@ function validateAll() {
 
 connection.onInitialize(params => {
   cwd = params.rootPath;
+
+  const possibleLocalPaths = ['.build/debug/swiftlint', '.build/release/swiftlint'];
+  for (const path of possibleLocalPaths) {
+    // Grab the project root from the local workspace
+    const fullPath = join(cwd, path);
+
+    if (existsSync(fullPath)) {
+      swiftLintPath = fullPath;
+      return new Promise();
+    }
+  }
 
   return whichPromise('swiftlint').then(binPath => {
     swiftLintPath = binPath;
